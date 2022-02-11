@@ -1,0 +1,53 @@
+Order no.,Date,Driver's name,Item,Number of items,Transport,Destination
+100001,41306,John May,TV,25,truck 4,Boston
+100002,41306,Peter White,washing machine,30,truck 3,NY
+100003,41307,Carl Nowak,washing machine,15,truck 3,Philadelphia
+100004,41308,Peter White,TV,32,truck 4,NY
+100005,41308,George Ramsay,refrigerator,25,truck 3,Boston
+100006,41308,Carl Nowak,washing machine,18,truck 1,Baltimore
+100007,41308,John May,refrigerator,15,truck 2,Philadelphia
+100008,41309,Carl Nowak,refrigerator,25,truck 3,Baltimore
+100009,41309,Peter White,TV,30,truck 1,Pittsburgh
+100010,41309,George Ramsay,refrigerator,15,truck 2,NY
+100011,41309,Mertl Pavel,microwave,25,truck 3,Philadelphia
+100012,41309,John May,washing machine,14,truck 4,NY
+100013,41310,John May,washing machine,25,airplane,Baltimore
+100014,41310,Carl Nowak,TV,30,truck 4,Philadelphia
+100015,41310,George Ramsay,microwave,15,truck 3,Boston
+100016,41310,Peter White,TV,15,truck 1,Pittsburgh
+100017,41311,John May,microwave,25,truck 1,NY
+100018,41312,John May,TV,30,truck 4,Philadelphia
+100019,41313,George Ramsay,washing machine,13,truck 3,Baltimore
+100020,41313,Peter White,refrigerator,25,truck 2,Philadelphia
+100021,41313,Carl Nowak,microwave,30,truck 1,Pittsburgh
+100022,41313,Peter White,washing machine,15,airplane,NY
+100023,41313,John May,microwave,25,truck 4,Boston
+100024,41314,George Ramsay,washing machine,34,truck 3,Baltimore
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,Column1,Column2,
+,,,,number of orders in Boston :,"=COUNTIF(G2:G25,""Boston"")",
+,,,,number of orders in Boston :,"=COUNTIF(D2:D25,""microwave"")",
+,,,,number of journeys with truck 3:,"=COUNTIF(F2:F25,""truck 3"")",
+,,,,number of Peter White journeys:,"=COUNTIF(C2:C25,""Peter White"" )",
+,,,,how many times are no. of items less than 20:,"=COUNTIF(E2:E25,"" < 20"")",
+,,,,,,
+,,,,,sumif / sumifs,
+,,,,sum of refrigerator items:,"=SUMIF(D2:D25,""refrigerator"",E2:E25)",
+,,,,sum of washing machine items:,"= SUMIF(D2:D25,""washing machine"",E2:E25)",
+,,,,sum of items transported by truck 4:,"=SUMIF(F2:F25,""truck 4"",E2:E25)",
+,,,,sum of items transported by trucks:,"=SUMIF(F2:F25,""truck*"",E2:E25)",
+,,,,,,
+,,,,,countifs,
+,,,,number of microvawe orders in Boston :,"=COUNTIFS(D2:D25,""microwave"",G2:G25,""Boston"")",
+,,,,number of Peter White journeys with truck 1:,"=COUNTIFS(C2:C25,""Peter White"",F2:F25,""truck 1"")",
+,,,,number of orders in Boston after 2/3/2013:,"=COUNTIFS(G2:G25,""Boston"",B2:B25,"">3-2-2013"")",
+,,,,number of orders between 2/3/2013 and 2/6/2013:,"=COUNTIFS(B2:B25,"">3-2-2013"",B2:B25,""<6-2-2013"")",
+,,,,,sumifs,
+,,,,sum of microwaves transported to NY:,"=SUMIFS(E2:E25,D2:D25,""microwave"",G2:G25,""NY"")",
+,,,,sum of items transported to Pittsburgh by truck 1:,"=SUMIFS(E2:E25,F2:F25,""truck 1"",G2:G25,""Pittsburgh"")",
+,,,,sum of items ordered between 2/3/2013 and 2/6/2013:,"=SUMIFS(E2:E25,B2:B25,"">3-2-13"",B2:B25,""<6-2-13"")",
+,,,,,,
+,,,,,,
+,,,,"sum of items transported to NY, Baltimore and Philadelphia:","=SUMIFS(E2:E25,G2:G25,""NY"")+SUMIFS(E2:E25,G2:G25,""Baltimore"")+SUMIFS(E2:E25,G2:G25,""Philadelphia"")",
