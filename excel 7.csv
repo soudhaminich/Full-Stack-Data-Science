@@ -1,0 +1,16 @@
+Palindrome,
+,
+,
+Word or Phrase,Palindrome?
+mam,Palindrome
+man,Not Palindrome
+a man a plan a canal panama,Palindrome
+"Able was I, ere I saw elba",Not Palindrome
+Straw warts,Palindrome
+A Toyota's a Toyota.,Not Palindrome
+Cigar? Toss it in a can. It is so tragic.,Not Palindrome
+"Dammit, I'm mad!",Not Palindrome
+Abba,Palindrome
+Kayak,Palindrome
+Taco cat,Palindrome
+Put it up,Palindrome
